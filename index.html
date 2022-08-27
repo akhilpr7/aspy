@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap cdn style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Python</title>
+</head>
+
+<body>
+    <header class="bg-primary d-flex align-items-center justify-content-between container-fluid">
+        <h2 class="text-light">PYTHON FORM</h2>
+        <div class="header-btn">
+            <a href="#department-table" class="btn btn-light">Department Table</a>
+            <a href="#employee-table" class="btn btn-light">Employee Table</a>
+        </div>
+    </header>
+    <main class="container-fluid">
+        <section class="main-section row">
+
+            <div class="side-bar col-2 bg-light">
+
+
+                <!-- department details -->
+
+                <details class="border rounded">
+                    <summary class="bg-primary text-light p-2 rounded">Department</summary><br>
+
+                    <!-- add department -->
+
+                    <div class="add-department ps-2">
+
+                        <!-- Button trigger modal -->
+
+                        <button type="button" class="btn btn-primary col-6" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            ADD
+                        </button><br><br>
+
+                        <!-- Modal -->
+
+                        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">ADD DEPARTMENT</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <form action="" onsubmit="click">
+                                        <div class="modal-body">
+                                            <input type="number" class="form-control" placeholder="department-id"
+                                                required><br>
+                                            <input type="text" class="form-control" placeholder="department-name"
+                                                required>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <input class="btn btn-primary" type="submit" value="submit">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- remove department -->
+
+                    <div class="remove-department ps-2">
+
+                        <!-- Button trigger modal -->
+
+                        <button type="button" class="btn btn-primary col-6" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal1">
+                            DELETE
+                        </button><br><br>
+
+                        <!-- Modal -->
+
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">DELETE DEPARTMENT</h5>
+                                        <buttEmployeeon type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <form name="search" action="/test.py" method="get">
+                                        <div class="modal-body">
+                                            <input type="number" class="form-control" placeholder="department-id"
+                                                name="searchbox" required>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secorequiredndary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <input class="btn btn-primary" type="submit" value="submit">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- edit department -->
+
+                    <div class="edit-department ps-2">
+
+                        <!-- Button trigger modal -->
+
+                        <button type="button" class="btn btn-primary col-6" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal2">
+                            EDIT
+                        </button><br><br>
+
+                        <!-- Modal -->
+
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">EDIT DEPARTMENT</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <form action="" onsubmit="click">
+                                        <div class="modal-body">
+                                            <input type="number" class="form-control" placeholder="department-id"
+                                                required>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <input class="btn btn-primary" type="submit" value="submit"
+                                                data-bs-toggle="modal" data-bs-target="#dep-edit">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- department-modal-2 -->
+
+                        <div class="modal fade" id="dep-edit" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">EDIT DEPARTMENT</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <form action="" onsubmit="click">
+                                        <div class="modal-body">
+                                            <input type="number" class="form-control" placeholder="Change Department-id"
+                                                required><br>
+                                            <input type="text" class="form-control" placeholder="Change Department-name"
+                                                required>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <input class="btn btn-primary" type="submit" value="submit">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details><br>
+
+                <!-- employee details -->
+
+                <details class="border rounded">
+
+                    <summary class="bg-primary text-light p-2 rounded">Employee</summary><br>
+
+                    <!-- add empoyee -->
+
+                    <div class="add-employee ps-2">
+
+                        <!-- Button trigger modal -->
+
+                        <button type="button" class="btn btn-primary col-6" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal3">
+                            ADD
+                        </button><br><br>
+
+                        <!-- Modal -->
+
+                        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">ADD EMPLOYEE</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <form action="" onsubmit="click">
+                                        <div class="modal-body">
+                                            <input type="number" class="form-control" placeholder="employee-id"
+                                                required><br>
+                                            <input type="text" class="form-control" placeholder="employee-name"
+                                                required><br>
+                                            <input type="text" class="form-control" placeholder="employee-designation"
+                                                required><br>
+                                            <input type="number" class="form-control" placeholder="department-id"
+                                                required>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <input class="btn btn-primary" type="submit" value="submit">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- remove employee -->
+
+                    <div class="remove-employee ps-2">
+
+                        <!-- Button trigger modal -->
+
+                        <button type="button" class="btn btn-primary col-6" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal4">
+                            DELETE
+                        </button><br><br>
+
+                        <!-- Modal -->
+
+                        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">DELETE EMPLOYEE</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <form action="" onsubmit="click">
+                                        <div class="modal-body">
+                                            <input type="number" class="form-control" name="" placeholder="employee-id"
+                                                required>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <input class="btn btn-primary" type="submit" value="submit">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- edit employee -->
+
+                    <div class="edit-employee ps-2">
+
+                        <!-- Button trigger modal -->
+
+                        <button type="button" class="btn btn-primary col-6" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal5">
+                            EDIT
+                        </button><br><br>
+
+                        <!-- Modal -->
+
+                        <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">EDIT EMPLOYEE</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <form action="" onsubmit="click">
+                                        <div class="modal-body">
+                                            <input type="number" class="form-control" placeholder="employee-id"
+                                                required>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <input class="btn btn-primary" type="submit" value="submit"
+                                                data-bs-toggle="modal" data-bs-target="#emp-edit">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- employee modal-2 -->
+
+                        <div class="modal fade" id="emp-edit" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">EDIT EMPLOYEE</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <form action="" onsubmit="click">
+                                        <div class="modal-body">
+                                            <input type="number" class="form-control" name=""
+                                                placeholder="change-employee-id" required><br>
+                                            <input type="text" class="form-control" placeholder="change-employee-name"
+                                                required><br>
+                                            <input type="text" class="form-control" placeholder="employee-designation"
+                                                required><br>
+                                            <input type="number" class="form-control" placeholder="change-department-id"
+                                                required>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <input class="btn btn-primary" type="submit" value="submit">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </details>
+
+            </div>
+
+
+
+            <div class="content col-10 container-fluid">
+
+                <!-- department table -->
+
+                <div id="department-table" class="content-section col-12 container-fluid ">
+                    <div class="cont-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Department</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>DC1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>DC2</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>DC3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- employee table -->
+
+                <div id="employee-table" class="content-section col-12 container-fluid">
+                    <div class="cont-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Employee_Name</th>
+                                    <th scope="col">Designation</th>
+                                    <th scope="col">Department_ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>DC1</td>
+                                    <td>DC1</td>
+                                    <td>DC1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>DC2</td>
+                                    <td>DC1</td>
+                                    <td>DC1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>DC3</td>
+                                    <td>DC1</td>
+                                    <td>DC1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- bootstrap cdn js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
